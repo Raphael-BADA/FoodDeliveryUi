@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../components/components.dart';
 import '../const.dart';
+import '../screens/home_screen.dart';
 import '../welcome.dart';
 import 'auth.dart';
 
@@ -105,13 +106,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Welcome()),
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
                         );
                       },
                       child: Container(
                         height: height * 0.06,
                         decoration: BoxDecoration(
-                            color: mainColor,
+                            gradient: LinearGradient(colors: [
+                              mainColor,
+                              Colors.orangeAccent,
+                            ]),
                             borderRadius: BorderRadius.circular(15)),
                         child: Center(
                           child: Text(

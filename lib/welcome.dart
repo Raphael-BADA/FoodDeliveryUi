@@ -59,7 +59,10 @@ class _WelcomeState extends State<Welcome> {
                             child: Container(
                               height: height * 0.06,
                               decoration: BoxDecoration(
-                                  color: mainColor,
+                                  gradient: LinearGradient(colors: [
+                                    mainColor,
+                                    Colors.orangeAccent,
+                                  ]),
                                   borderRadius: BorderRadius.circular(15)),
                               child: Center(
                                   child: Text(
